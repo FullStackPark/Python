@@ -28,10 +28,12 @@ def create_txt(newlist):
     txtnew.write(strlist)
     txtnew.close()
 
-    if __name__ =='__main__ ':
-        store_list=['']
-        new_list=create_list()
-        for x in range(200):
-            store_list.append(gen_code(new_list))
-            store_list.append('\n')
-        create_txt(store_list)
+if __name__ == '__main__':
+
+    store_list = ['']
+    new_list   = create_list()
+
+    for x in range(200):
+        store_list.append(gen_code(new_list))
+        store_list.append('\n')
+    create_txt(store_list)
