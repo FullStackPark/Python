@@ -3,7 +3,7 @@
 import xlwt
 
 def get_text():
-    with open('student.txt',encoding='utf-8') as f:
+    with open('student.txt',encoding='gbk') as f:
         str_temp=f.read()
         data = eval(str_temp)
     return data
