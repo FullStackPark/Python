@@ -12,7 +12,8 @@ def get_word_frequencies(file_name):
             if word.isdigit():
                 pass
             else:
-                dic.setdefault(word.lower(),0)  #不区分大小写                dic[word.lower()] += 1
+                dic.setdefault(word.lower(),0)  #不区分大小写
+                dic[word.lower()] += 1
     print(dic)
 if __name__=='__main__':
-    get_word_frequencies("WhatisPython.txt")
+    get_word_frequencies("WhatisPyth)on.txt"
