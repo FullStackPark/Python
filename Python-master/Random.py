@@ -10,13 +10,13 @@ def create_list():
     for x in range(97,123):
         a=str(chr(x))
         base.append(a)
-    for x in range(10):
+    for x in range(5):
         base.append(str(x))
     return base
 
 def gen_code(base):
     s=''
-    for x in range(16):
+    for x in range(4):
         a=random.choice(base)
         s=s+a
     print(s)
