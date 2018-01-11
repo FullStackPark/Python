@@ -1,0 +1,27 @@
+#!bin/python3
+
+import xlwt
+
+def get_text():
+    with open('city.txt',encoding='utf-8') as f:
+        str_temp=f.read()
+        data = eval(str_temp)
+    return data
+
+def create_xls(dic):
+    wb = xlwt.Workbook()
+    ws = wb.add_sheet('City')
+
+    row = 0
+    for k,v in dic.items():
+        ws.write(row,0,k)
+        col = 1
+        for items in v:
+            ws.write(row,col,items)
+            col += 1
+        row += 1
+    wb.save('city.xls')
+
+if __name__ == '__main__':
+
+    create_xls(get_text())
